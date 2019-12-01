@@ -7,16 +7,16 @@
 
 document.body.addEventListener('click', function (e) {
     const x = e.clientX;
-    console.log(`wartość x: ${x}`);
     const y = e.clientY;
-    console.log(`wartość y: ${y}`);
-
+    console.log(`wartość x: ${x} wartość y: ${y}`);
+    let color;
     if ((x % 2 === 0) && (y % 2 === 0)) {
-        document.body.style.backgroundColor = 'red';
+        color = 'red';
     } else if ((x % 2 !== 0) && (y % 2 !== 0)) {
-        document.body.style.backgroundColor = 'blue';
+        color = 'blue';
     } else {
-        document.body.style.backgroundColor = 'green';
+        color = 'green';
     }
+    document.body.style.backgroundColor = color;
 });
 
